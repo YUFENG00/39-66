@@ -1,0 +1,232 @@
+$base-size 10px
+img-size(n)
+	height $base-size * n
+	width $base-size * n
+	
+
+.nav-item 
+	position relative
+	width auto
+	height $base-size * 5
+	background #000
+	font-size $base-size + 8
+	color #fff
+	text-align center
+
+.logo 
+	position absolute
+	img-size(5)
+	margin-left $base-size * 2
+	margin-top $base-size
+
+.menu 
+	margin-right $base-size * 2
+	margin-top $base-size
+	float right
+
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 768px) 
+	.logo 
+		position absolute
+		img-size(5)
+		margin-top $base-size
+		margin-left 45%
+
+.menu-item 
+	position fixed
+	bottom 0
+	display flex
+	justify-content space-between
+	width 100%
+	background #ccc
+	z-index 100
+
+.menu 
+	font-size $base-size * 2
+	color #000
+
+
+
+/* 小屏幕（平板，大于等于 768px） */
+/*@media (min-width: 769px) { ... }*/
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+/*@media (min-width: 992px) { ... }*/
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+/*@media (min-width: 1200px) { ... }*/
+
+
+
+
+.banner 
+	width 100%
+	height $base-size * 20
+
+
+@media (max-width: 768px) 
+	.banner 
+		width 100%
+		height $base-size * 15
+
+
+/*主体内容部分*/
+.content 
+	position relative
+
+/*左侧内容部分*/
+.left-main 
+	position relative
+	width 70%
+	height auto
+	margin-top $base-size * 2
+/*左侧上方内容*/
+.left-top-content 
+	display flex
+	justify-content space-between
+	margin-bottom $base-size * 2
+	div
+		position relative
+		flex 1
+    img 
+    	img-size(20)
+    span
+        position absolute
+        width 200px
+        left 0
+        bottom 0
+        background #000
+        opacity .5
+        text-align center
+
+.title1 
+    font-size 20px
+    color #fff
+
+.text-item1 
+	font-size 18px
+	color #fff
+
+
+/*左侧下方内容*/
+.left-bottom-content 
+	div 
+		position relative
+		margin-top 20px
+	img
+        img-size(20)
+    span
+    	position absolute
+    	top 0
+
+.title2 
+	font-size 20px
+
+.text-item2 
+	font-size 18px
+
+
+/*右侧内容*/
+.right-main 
+	position absolute
+	right 0
+	top 0
+	float right
+	margin-top 20px
+	width 25%
+
+
+/*右侧上方内容*/
+.right-top-content 
+	position relative
+	img 
+		width 100%
+		height 150px
+	span
+        position absolute
+        left 0
+        bottom 25px
+        width 100%
+        text-align center
+
+    
+/*右侧下方内容*/
+.right-bottom-content 
+	div 
+		position relative
+		top 180px
+		/*margin-top: 30px;*/
+		line-height 10px
+
+.title3 
+	font-size 20px
+
+.time 
+	font-size 16px
+
+footer 
+	width 100%
+	height 100px
+	background #ccc
+	text-align center
+
+
+@media (max-width: 768px) 
+	.left-main 
+		width 100%
+	
+	.left-top-content 
+		img 
+			width 80%
+			height 100px
+		span
+            width 80%
+            line-height 10px
+	
+	.title1 
+		font-size 16px
+	
+	.text-item1 
+		font-size 14px
+	
+
+
+
+	.right-main 
+		position relative
+		float none
+		width 100%
+	
+	.right-top-content 
+		width 100%
+	
+	.right-bottom-content
+		div 
+        	position static
+        	border 1px solid #ccc
+        	margin-top 20px
+        	height 100px
+        	line-height 20px
+        img 
+        	position absolute
+        	width 50%
+        	left 0
+        	top 0
+	
+	.title3 
+		font-size 24px
+	
+
+
+    .left-bottom-content
+    	img 
+    		position relative
+    		left 60%
+    		width 40%
+    		height 150px
+    	span
+	        position absolute
+	        width 50%
+	        left 0
+	        top 0 
